@@ -9,6 +9,7 @@
 
  <script>
     import Counter from '$lib/components/Counter.svelte';
+    let count = $state(0);
  </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -19,7 +20,8 @@
     Count: {count}
 </button>-->
 
-<Counter initialCount={0} />
+<Counter bind:initialCount={count} />
+<p> count from parent is {count}</p>
 
 <!-- 5-creiamo un bottone in cui gli diciamo che al click deve eseguire questa funzione in cui raddoppia il valore di count. viene preso il valore di doubled da sopra e doubled viene sostituito da qui -->
 <!-- <span> doubled is {doubled}</span> -->
