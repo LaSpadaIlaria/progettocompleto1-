@@ -8,8 +8,10 @@
  <!-- 4-faccio anche la variabile doubled per il bottone che raddoppia -->
 
  <script>
+    import Canvas from '$lib/components/Canvas.svelte';
     import Counter from '$lib/components/Counter.svelte';
-    let count = $state(0);
+    let count = $state(5);
+    $inspect(count);
  </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -22,6 +24,8 @@
 
 <Counter bind:initialCount={count} />
 <p> count from parent is {count}</p>
+
+<Canvas />
 
 <!-- 5-creiamo un bottone in cui gli diciamo che al click deve eseguire questa funzione in cui raddoppia il valore di count. viene preso il valore di doubled da sopra e doubled viene sostituito da qui -->
 <!-- <span> doubled is {doubled}</span> -->
