@@ -23,6 +23,12 @@
 </button>-->
 
 <Counter bind:initialCount={count} />
+
+
+{#if count > 10 }
+    <p> count from parent is {count}</p>
+{/if}
+
 <p> count from parent is {count}</p>
 
 <Canvas />
